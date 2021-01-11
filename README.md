@@ -5,10 +5,11 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.com/smwoodman/CruzPlot.svg?branch=master)](https://travis-ci.com/smwoodman/CruzPlot)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/smwoodman/CruzPlot?branch=master&svg=true)](https://ci.appveyor.com/project/smwoodman/CruzPlot)
+[![CRAN
+version](http://www.r-pkg.org/badges/version/CruzPlot)](https://cran.r-project.org/package=CruzPlot)
+[![R-CMD-check](https://github.com/smwoodman/CruzPlot/workflows/R-CMD-check/badge.svg)](https://github.com/smwoodman/CruzPlot/actions)
+<!-- [![Travis build status](https://travis-ci.com/smwoodman/CruzPlot.svg?branch=master)](https://travis-ci.com/smwoodman/CruzPlot) -->
+<!-- [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/smwoodman/CruzPlot?branch=master&svg=true)](https://ci.appveyor.com/project/smwoodman/CruzPlot) -->
 <!-- badges: end -->
 
 CruzPlot is an R package that contains a GUI for creating maps, plotting
@@ -17,7 +18,17 @@ format produced by WinCruz.
 
 ## Installation
 
-You can install CruzPlot from [GitHub](https://github.com/) with:
+You can install the released version of CruzPlot from
+[CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("CruzPlot")
+```
+
+You can install the developmental version of CruzPlot from
+[GitHub](https://github.com/). To use the development version of
+CruzPlot, it is recommended to install the development version of
+[swfscDAS](https://smwoodman.github.io/swfscDAS/index.html) as well:
 
 ``` r
 # install.packages("remotes") # Install remotes package if needed
@@ -25,28 +36,9 @@ remotes::install_github("smwoodman/swfscDAS", build_vignettes = TRUE)
 remotes::install_github("smwoodman/CruzPlot")
 ```
 
-Note that CruzPlot depends on swfscDAS, and thus you should ensure that
-[swfscDAS](https://smwoodman.github.io/swfscDAS/) is installed and
-updated as well. Running the above code will ensure the latest versions
-of both packages are installed. However, if you want to force an
-installation, you can run:
-
-``` r
-remotes::install_github("smwoodman/swfscDAS", force = TRUE, build_vignettes = TRUE)
-remotes::install_github("smwoodman/CruzPlot", force = TRUE)
-```
-
-Before installing CruzPlot, you must have
-[R](https://www.r-project.org/),
-[RStudio](https://rstudio.com/products/rstudio/download/#download), and
-the appropriate version of
-[Rtools](https://cran.r-project.org/bin/windows/Rtools/) installed. It
-is best practice to install after closing all instances of R and
-RStudio, and then running the install code from the R GUI rather than
-RStudio. Please contact the developer if you have any issues.
-
-After updating, it is recommended to create and save new workspaces,
-rather than using workspaces saved with a previous version of CruzPlot.
+After updating CruzPlot, it is recommended to create and save new
+workspaces, rather than using workspaces saved with a previous version
+of CruzPlot. Please contact the developer if you have any issues.
 
 ## Running CruzPlot
 

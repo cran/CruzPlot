@@ -1,9 +1,9 @@
-68e7e60304b72bf8bd524360d478b2af *DESCRIPTION
+fd117885f7eb8291de670c4cb4ac0358 *DESCRIPTION
 4a2080c41e09ac4de5705e3656cb5c82 *NAMESPACE
-286eff302c704fd4ec998c693cee327a *NEWS.md
+99b40c3e79304b6ff3f1309033aa7bcc *NEWS.md
 85066cb9fe05a974081f8f2d7728dfd6 *R/CruzPlot-package.R
 80d793294fee9e4ac17390a842610698 *R/cruzplot_gui.R
-0c0746564f40f92638937d371e5a2231 *README.md
+ccad2d9cf4e4f864350b748c1334377c *README.md
 72001751b07f3ed01e012d1d4aaf24c5 *inst/SpCodes.dat
 64793c95f7cdc7f3a7543905417a36c9 *inst/shiny/app.R
 b201718542add2967c22d474881e7f61 *inst/shiny/app_vals.R
@@ -49,6 +49,6 @@ a7900848dd204b458fec8c1dd42d9040 *inst/shiny/server_files/server_render.R
 feb02f40d8b3745e9461916267ea5ec9 *man/CruzPlot-package.Rd
 143e1fcb6bc4a34a3a8bbc9d5193378e *man/cruzplot_gui.Rd
 518f1665763e4739068dbae96fe11619 *tests/testthat.R
-933a06b4127bdd1ee82ea2c0c19d29f9 *tests/testthat/test-shiny.R
+ae4f47491bf9c0bf0573204274d45814 *tests/testthat/test-shiny.R
 2770395438681b68ceed1cf0eff7dd20 *tests/testthat/test-spatial.R
 7c3ffb5d17efeaa84989ebfa58c1c230 *tests/testthat/test-tidy.R
