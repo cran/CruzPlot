@@ -278,14 +278,15 @@ ui.createMap <- function() {
             box(
               title = "Download bathymetric data", status = "warning", solidHeader = FALSE, collapsible = TRUE, width = 6,
               helpText("Download bathymetric data from NOAA website (see the documentation for",
-                       tags$a(href = "https://cran.r-project.org/web/packages/marmap/marmap.pdf",
+                       tags$a(href = "https://CRAN.R-project.org/package=marmap",
                               "marmap function 'getNOAA.bathy'"),
                        "for more details).",
                        "The coordinates of the downloaded data will be the same as the current map range.",
-                       "After downloading, you must load the CSV file into CruzPlot"),
+                       "After downloading, you must load the CSV file into CruzPlot in the 'Water: Ocean color style' section"),
               numericInput("depth_res", tags$h5("Bathymetric data resolution, in minutes (range: 0-60)"),
                            value = 10, min = 0, max = 60, step = 5),
-              uiOutput("depth_download_button")
+              uiOutput("depth_download_button"),
+              uiOutput("depth_download_message")
             )
           )
         ),
