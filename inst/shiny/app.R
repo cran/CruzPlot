@@ -2,25 +2,35 @@
 
 ###############################################################################
 # Check for and attach packages
-list.packages <- list(
-  "dplyr", "DT", "geosphere", "mapdata", "marmap", "maps", "shiny",
-  "shinydashboard", "shinyjs", "stringr", "swfscDAS"
+# list.packages <- list(
+#   "dplyr", "DT", "geosphere", "mapdata", "marmap", "maps", "shiny",
+#   "shinydashboard", "shinyjs", "stringr", "swfscDAS"
+# )
+#
+# p.check <- vapply(list.packages, requireNamespace, as.logical(1), quietly = TRUE)
+# if (!all(p.check))
+#   stop("To use CruzPlot, the following packages must be installed: ",
+#        paste(list.packages, collapse = ", "), "\n",
+#        "To install the missing packages, run the following:\n",
+#        "install.packages(c(\"", paste(list.packages[!p.check],
+#                                       collapse = "\", \""), "\"))")
+#
+# sapply(list.packages, require, character.only = TRUE, warn.conflicts = FALSE)
+
+stopifnot(
+  require(CruzPlot),
+  require(dplyr),
+  require(DT),
+  require(geosphere),
+  require(mapdata),
+  require(marmap),
+  require(maps),
+  require(shiny),
+  require(shinydashboard),
+  require(shinyjs),
+  require(stringr),
+  require(swfscDAS)
 )
-
-p.check <- vapply(list.packages, requireNamespace, as.logical(1), quietly = TRUE)
-if (!all(p.check))
-  stop("To use CruzPlot, the following packages must be installed: ",
-       paste(list.packages, collapse = ", "), "\n",
-       "To install the missing packages, run the following:\n",
-       "install.packages(c(\"", paste(list.packages[!p.check],
-                                      collapse = "\", \""), "\"))")
-
-sapply(list.packages, require, character.only = TRUE, warn.conflicts = FALSE)
-
-# if (!require(CruzPlot))
-#   stop("Error attaching CruzPlot package - please reintall CruzPlot")
-# if (!all(sapply(list.packages, require, character.only = TRUE)))
-#   stop("Error attaching packages - please reinstall CruzPlot")
 
 
 ###############################################################################
@@ -99,7 +109,8 @@ ui <- dashboardPage(
       tags$br(), tags$br(), tags$br(),
       numericInput("map_size", "Map height (pixels)", value = 600, min = 0, step = 100),
       tags$br(),
-      actionButton("stop", "Close CruzPlot")
+      actionButton("stop", "Close CruzPlot"),
+      column(12, tags$h5(paste0("CruzPlot v", packageVersion("CruzPlot"))))
     ), width = "200"
   ),
 
@@ -225,8 +236,7 @@ server <- function(input, output, session) {
       # oldpar <- par(no.readonly = TRUE)
       # on.exit(par(oldpar))
 
-      source(file.path("server_files", "drawStatic.R"), local = TRUE, chdir = TRUE)
-      source(file.path("server_files", "drawInteractive.R"), local = TRUE, chdir = TRUE)
+      source(file.path("server_files", "cruzDraw.R"), local = TRUE, chdir = TRUE)
     }
   })
 }

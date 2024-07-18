@@ -1,3 +1,16 @@
+# CruzPlot 1.4.9
+
+* Moved repo to https://github.com/swfsc, and updated all associated documentation.
+
+* Changed license to Apache License (== 2), based on NMFS guidance at https://nmfs-opensci.github.io/GitHub-Guide
+
+* Added ability to download maps with a transparent background (#5)
+
+* Published the CruzPlot shiny app at https://connect.fisheries.noaa.gov/CruzPlot
+
+* Add CruzPlot package version number to the shiny app
+
+
 # CruzPlot 1.4.8
 
 * CruzPlot now depends on R >= 4.0.0 for consistency across DAS packages
@@ -117,7 +130,7 @@
 
 ### DAS data
 
-* CruzPlot now uses [swfscDAS](https://smwoodman.github.io/swfscDAS/) for processing DAS data
+* CruzPlot now uses [swfscDAS](https://swfsc.github.io/swfscDAS/) for processing DAS data
 
 * Users can load their own species codes file if they do not wish to use the default SpCodes.dat
 
